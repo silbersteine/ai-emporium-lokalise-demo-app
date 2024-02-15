@@ -1,5 +1,4 @@
 {
-  "key1": "hello Brian",
   "facebook": "Facebook",
   "follow-us": "Follow us",
   "instagram": "Instagram",
@@ -99,5 +98,6 @@
 "DarkSwitch_button_lightMod": "Light Mode",
 "DarkSwitch_button_darkMode": "Dark Mode",
 "my-test-key-1": "my test key value",
-"localeSwitcher_button_languages": "Languages"
+"localeSwitcher_button_languages": "Languages",
+"key1": "hello Ryan"
 }
