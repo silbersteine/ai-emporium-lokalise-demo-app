@@ -35,6 +35,8 @@ jobs:
           GH_TOKEN: ${{ github.token }}
         run: |
              ./bin/lokalise2 --token ${{ env.VAR_LOKALISE_API_TOKEN }} --project-id ${{ env.VAR_LOKALISE_PROJECT_ID }} file download --format json --filter-langs=de --original-filenames=true --directory-prefix=/
+             echo "Listing .json files in ./public/locales"
+             find ./public/locales -name "*.json"
              git add ./public/locales/\*.json
              if [[ -z $(git status --untracked-files=no --porcelain) ]]
              then
