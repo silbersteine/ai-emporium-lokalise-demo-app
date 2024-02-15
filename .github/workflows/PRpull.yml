@@ -28,19 +28,13 @@ jobs:
         run: |
           curl -sfL https://raw.githubusercontent.com/lokalise/lokalise-cli-2-go/master/install.sh | sh
 
-      - name: Download translated files
+      - name: Download translated files and commit and push
         env: 
           VAR_LOKALISE_API_TOKEN: ${{ secrets.API_TOKEN }}
           VAR_LOKALISE_PROJECT_ID: ${{ vars.PROJECT_ID }}
-        run: |
-             ./bin/lokalise2 --token ${{ env.VAR_LOKALISE_API_TOKEN }} --project-id ${{ env.VAR_LOKALISE_PROJECT_ID }} file download --format json --filter-langs=de --original-filenames=true --directory-prefix=/
-            
-
-          
-      - name: Commit and Push Changes
-        env: 
           GH_TOKEN: ${{ github.token }}
         run: |
+             ./bin/lokalise2 --token ${{ env.VAR_LOKALISE_API_TOKEN }} --project-id ${{ env.VAR_LOKALISE_PROJECT_ID }} file download --format json --filter-langs=de --original-filenames=true --directory-prefix=/
              git add ./public/locales/\*.json
              if [[ -z $(git status --untracked-files=no --porcelain) ]]
              then
