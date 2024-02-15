@@ -60,7 +60,7 @@ jobs:
       
       - name: Stage, Commit, and Push Changes
         run: |
-          git add ./public/locales/\*.json
+          git add ./public/locales/de.json
           if [[ -z $(git status --untracked-files=no --porcelain) ]]
           then
             echo "No changes detected. No Commit."
