@@ -22,7 +22,7 @@ const languages = [
         shortName: "es",
         unavailable: false,
         href: "/es"
-    }
+    },
     {
         id: 4, 
         name: <Trans i18nKey="localeSwitcher_french"></Trans>,
