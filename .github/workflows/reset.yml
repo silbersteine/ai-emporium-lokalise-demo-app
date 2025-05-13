@@ -1,0 +1,47 @@
+name: Reset
+run-name: Reset 
+on: 
+  schedule:
+    - cron: '15 3 * * *'
+  workflow_dispatch:
+jobs:
+  build:
+    if: ${{ github.ref_name == 'main' }}
+    runs-on: ubuntu-latest 
+    steps:
+      - uses: actions/checkout@v3
+        with:
+          fetch-depth: 0      
+      - name: Lokalise CLI
+        run: curl -sfL https://raw.githubusercontent.com/lokalise/lokalise-cli-2-go/master/install.sh | sh
+      - name: Revert branch [main] to ${{ vars.PRODUCTION_BRANCH_RESTORE_COMMIT }} 
+        env:
+          GH_TOKEN: ${{ github.token }}
+          VAR_GITHUB_PRODUCTION_BRANCH_RESTORE_COMMIT: ${{ vars.PRODUCTION_BRANCH_RESTORE_COMMIT }} 
+        run: |
+             git config --global user.name "${GITHUB_ACTOR}"
+             git config --global user.email "${GITHUB_ACTOR}@users.noreply.github.com"
+             git branch main-backup
+             git reset --hard ${{ env.VAR_GITHUB_PRODUCTION_BRANCH_RESTORE_COMMIT }} 
+             git reset --soft main-backup
+             if [[ -z $(git status --untracked-files=no --porcelain) ]]
+             then
+              echo "No changes"
+             else
+              git commit -m "Revert to ${{ env.VAR_GITHUB_PRODUCTION_BRANCH_RESTORE_COMMIT }}"
+              git push origin main
+             fi
+      - name: Clean Lokalise project [${{ env.VAR_LOKALISE_PROJECT_ID }}]
+        env:
+          VAR_LOKALISE_API_TOKEN: ${{ secrets.API_TOKEN }}
+          VAR_LOKALISE_PROJECT_ID: ${{ vars.PROJECT_ID }}
+          ENV_LOKALISE_SOURCE_LANG_ISO: en
+          
+        run: |
+             while read file 
+             do 
+                if [ -f $file ]
+                then
+                    ./bin/lokalise2 --token ${{ env.VAR_LOKALISE_API_TOKEN }} --project-id ${{ env.VAR_LOKALISE_PROJECT_ID }} file upload --file="$file" --lang-iso $(basename $file .json) --replace-modified --include-path --use-automations=false --cleanup-mode --poll-timeout 120s
+                fi
+             done < <(git ls-files -- './public/locales/*.json')      

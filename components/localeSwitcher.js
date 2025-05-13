@@ -10,27 +10,11 @@ const languages = [
         unavailable: false,
         href: "/en",
     },
-    {   id: 2, 
-        name: <Trans i18nKey="localeSwitcher_german"></Trans>,
-        shortName: "de", 
-        unavailable: false, 
-        href: "/de" 
-    },
-    {
-        id: 3, 
-        name: <Trans i18nKey="localeSwitcher_spanish"></Trans>,
-        shortName: "es",
-        unavailable: false,
-        href: "/es"
-    }
-    {
-        id: 4, 
-        name: <Trans i18nKey="localeSwitcher_french"></Trans>,
-        shortName: "fr",
-        unavailable: false,
-        href: "/fr"
-    }
-    
+    { id: 2, 
+    name: <Trans i18nKey="localeSwitcher_german"></Trans>,
+    shortName: "de", 
+    unavailable: false, 
+    href: "/de" },
 ];
 
 const LocaleSwitcher = () => {
