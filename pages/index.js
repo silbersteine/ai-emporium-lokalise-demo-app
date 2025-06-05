@@ -40,7 +40,6 @@ i18next
 });
 
 const Home = () => {
-  const { t, i18n } = useTranslation()
   return (
     <div suppressHydrationWarning>
       <Head>
@@ -53,14 +52,11 @@ const Home = () => {
       </Head>
 
       <Navbar />
-      <h1>
-        {i18next.t('test_title')}
-      </h1>
       <Hero />
       <SectionTitle
         pretitle="Nextly Benefits"
         title=" Why should you use this landing page">
-        ANIL ERIC Nextly is a free landing page & marketing website template for startups
+        Nextly is a free landing page & marketing website template for startups
         and indie projects. Its built with Next.js & TailwindCSS. And its
         completely open-source.
       </SectionTitle>

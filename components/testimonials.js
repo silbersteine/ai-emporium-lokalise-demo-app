@@ -1,6 +1,5 @@
 import Image from "next/image";
 import React from "react";
-import { useTranslation } from 'next-i18next';
 import Container from "./container";
 
 import userOneImg from "../public/img/user1.jpg";
@@ -8,14 +7,13 @@ import userTwoImg from "../public/img/user2.jpg";
 import userThreeImg from "../public/img/user3.jpg";
 
 const Testimonials  = () => {
-  const { t } = useTranslation()
   return (
     <Container>
       <div className="grid gap-10 lg:grid-cols-2 xl:grid-cols-3">
         <div className="lg:col-span-2 xl:col-auto">
           <div className="flex flex-col justify-between w-full h-full bg-gray-100 px-14 rounded-2xl py-14 dark:bg-trueGray-800">
             <p className="text-2xl leading-normal ">
-              {t('testimonial-benefit')}
+              Share a real testimonial that hits some of your benefits from one of your popular customer.
             </p>
 
             <Avatar
@@ -28,7 +26,7 @@ const Testimonials  = () => {
         <div className="">
           <div className="flex flex-col justify-between w-full h-full bg-gray-100 px-14 rounded-2xl py-14 dark:bg-trueGray-800">
             <p className="text-2xl leading-normal ">
-              {t('testimonial-benefit-2')}
+              Make sure you only pick the right sentence to keep it short and simple.
             </p>
             <Avatar
               image={userTwoImg}
@@ -40,7 +38,7 @@ const Testimonials  = () => {
         <div className="">
           <div className="flex flex-col justify-between w-full h-full bg-gray-100 px-14 rounded-2xl py-14 dark:bg-trueGray-800">
             <p className="text-2xl leading-normal ">
-              {t('testimonial-benefit-3')}
+              This is an awesome landing page template I've seen. I would use this for anything.
             </p>
 
             <Avatar

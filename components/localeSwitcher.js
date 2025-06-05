@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { Listbox } from "@headlessui/react";
-import { useTranslation } from "next-i18next";
+import { useTranslation, Trans } from "next-i18next";
 
 const languages = [
     {
@@ -10,7 +10,27 @@ const languages = [
         unavailable: false,
         href: "/en",
     },
-    { id: 2, name: "German", shortName: "de", unavailable: false, href: "/de" },
+    {   id: 2,
+        name: "German",
+        shortName: "de",
+        unavailable: false,
+        href: "/de"
+    },
+    {
+        id: 3,
+        name: "Spanish",
+        shortName: "es",
+        unavailable: false,
+        href: "/es"
+    },
+    {
+        id: 4,
+        name: "French",
+        shortName: "fr",
+        unavailable: false,
+        href: "/fr"
+    }
+
 ];
 
 const LocaleSwitcher = () => {

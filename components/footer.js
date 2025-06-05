@@ -2,10 +2,8 @@ import Link from "next/link";
 import Image from "next/image";
 import React from "react";
 import Container from "./container";
-import { useTranslation } from 'next-i18next';
 
 export default function Footer() {
-  const { t, i18n } = useTranslation()
   const navigation = [
     "Product",
     "Features",
@@ -34,7 +32,7 @@ export default function Footer() {
             </div>
 
             <div className="max-w-md mt-4 text-gray-500 dark:text-gray-400">
-              {t('nextly-is-a-free-landing-page-and-marketing-website-template')}
+              Nextly is a free landing page & marketing website template for startups and indie projects. Its built with Next.js & TailwindCSS. And its completely open-source.
             </div>
 
             <div className="mt-5">
@@ -72,34 +70,34 @@ export default function Footer() {
             </div>
           </div>
           <div className="">
-            <div>{t('follow-us')}</div>
+            <div>Follow us</div>
             <div className="flex mt-5 space-x-5 text-gray-400 dark:text-gray-500">
               <a
                 href="https://twitter.com/web3templates"
                 target="_blank"
                 rel="noopener">
-                <span className="sr-only">{t('twitter')}</span>
+                <span className="sr-only">X</span>
                 <Twitter />
               </a>
               <a
                 href="https://facebook.com/web3templates"
                 target="_blank"
                 rel="noopener">
-                <span className="sr-only">{t('facebook')}</span>
+                <span className="sr-only">Facebook</span>
                 <Facebook />
               </a>
               <a
                 href="https://instagram.com/web3templates"
                 target="_blank"
                 rel="noopener">
-                <span className="sr-only">{t('instagram')}</span>
+                <span className="sr-only">Instagram</span>
                 <Instagram />
               </a>
               <a
                 href="https://linkedin.com/"
                 target="_blank"
                 rel="noopener">
-                <span className="sr-only">{t('linkedin')}</span>
+                <span className="sr-only">Linkedin</span>
                 <Linkedin />
               </a>
             </div>
@@ -199,7 +197,7 @@ const Backlink = () => {
         />
       </svg>
 
-      <span>{t('web3templates')}</span>
+      <span>Web3Templates</span>
     </a>
   );
 };
