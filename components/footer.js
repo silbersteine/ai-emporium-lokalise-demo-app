@@ -171,7 +171,6 @@ const Linkedin = ({ size = 24 }) => (
 );
 
 const Backlink = () => {
-  const { t, i18n } = useTranslation()
   return (
     <a
       href="https://web3templates.com"

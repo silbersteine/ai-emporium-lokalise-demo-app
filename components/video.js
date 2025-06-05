@@ -2,7 +2,6 @@ import { useState } from "react";
 import Container from "./container";
 
 const Video = () => {
-  const { t } = useTranslation()
   const [playVideo, setPlayVideo] = useState(false);
   return (
     <Container>
