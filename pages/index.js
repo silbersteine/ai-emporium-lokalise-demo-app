@@ -1,4 +1,3 @@
-import { useTranslation, Trans } from 'next-i18next';
 import Backend from 'i18next-http-backend';
 import LanguageDetector from 'i18next-browser-languagedetector';
 import { initReactI18next } from "react-i18next";
@@ -19,34 +18,32 @@ import Faq from "../components/faq";
 import PopupWidget from "../components/popupWidget";
 import i18next from 'i18next';
 
-
 i18next
-.use(Backend) 
-.use(LanguageDetector)
-.use(initReactI18next)
-.init({
-  fallbackLng: 'en', // Use en if detected lng is not available
-  // debug: true,
-  interpolation: {
-    escapeValue: false, // React already does escaping
-  },
-  react: {
-    useSuspense: false,
-  },
-  backend: {
-    // for all available options read the backend's repository readme file
-    loadPath: 'locales/{{lng}}.json'
-  }
-});
+  .use(Backend) 
+  .use(LanguageDetector)
+  .use(initReactI18next)
+  .init({
+    fallbackLng: 'en',
+    // debug: true,
+    interpolation: {
+      escapeValue: false,
+    },
+    react: {
+      useSuspense: false,
+    },
+    backend: {
+      loadPath: 'locales/{{lng}}.json'
+    }
+  });
 
 const Home = () => {
   return (
     <div suppressHydrationWarning>
       <Head>
-        <title>Nextly - Free Nextjs & TailwindCSS Landing Page Template</title>
+        <title>The Marketing Masters - Elevate Your Brand with Expert Strategies</title>
         <meta
           name="description"
-          content="Nextly is a free landing page template built with next.js & Tailwind CSS"
+          content="The Marketing Masters provides expert marketing strategies and tools to help your brand grow and succeed."
         />
         <link rel="icon" href="/favicon.ico" />
       </Head>
@@ -54,32 +51,28 @@ const Home = () => {
       <Navbar />
       <Hero />
       <SectionTitle
-        pretitle="Nextly Benefits"
-        title=" Why should you use this landing page">
-        Nextly is a free landing page & marketing website template for startups
-        and indie projects. Its built with Next.js & TailwindCSS. And its
-        completely open-source.
+        pretitle="Marketing Masters Benefits"
+        title="Why choose The Marketing Masters?">
+        The Marketing Masters offers proven marketing solutions tailored for startups and growing businesses.
+        Gain access to expert insights, powerful tools, and a supportive community all in one place.
       </SectionTitle>
       <Benefits data={benefitOne} />
       <Benefits imgPos="right" data={benefitTwo} />
       <SectionTitle
-        pretitle="Watch a video"
-        title="Learn how to fullfil your needs">
-        This section is to highlight a promo or demo video of your product.
-        Analysts says a landing page with video has 3% more conversion rate. So,
-        don&apos;t forget to add one. Just like this.
+        pretitle="Watch our video"
+        title="Discover how we can help you grow">
+        Watch our demo video to see how The Marketing Masters can unlock your brand’s full potential.
+        Marketing studies show videos increase conversion rates significantly—don’t miss out!
       </SectionTitle>
       <Video />
       <SectionTitle
         pretitle="Testimonials"
-        title="Here's what our customers said">
-        Testimonails is a great way to increase the brand trust and awareness.
-        Use this section to highlight your popular customers.
+        title="What our clients say about us">
+        Hear from successful brands and marketing leaders who have transformed their business with our platform.
       </SectionTitle>
       <Testimonials />
       <SectionTitle pretitle="FAQ" title="Frequently Asked Questions">
-        Answer your customers possible questions here, it will increase the
-        conversion rate as well as support or chat requests.
+        Have questions? We’ve got answers. Find out everything you need to know to get started quickly and confidently.
       </SectionTitle>
       <Faq />
       <Cta />

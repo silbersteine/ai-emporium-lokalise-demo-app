@@ -5,11 +5,11 @@ import Container from "./container";
 
 export default function Footer() {
   const navigation = [
-    "Product",
-    "Features",
+    "Services",
+    "Campaigns",
     "Pricing",
-    "Company",
-    "Blog",
+    "About Us",
+    "Insights",
   ];
   const legal = ["Terms", "Privacy", "Legal"];
   return (
@@ -27,12 +27,12 @@ export default function Footer() {
                       height="32"
                       className="w-8"
                     />
-                  <span>Nextly</span>
+                  <span>The Marketing Masters</span>
               </Link>
             </div>
 
             <div className="max-w-md mt-4 text-gray-500 dark:text-gray-400">
-              Nextly is a free landing page & marketing website template for startups and indie projects. Its built with Next.js & TailwindCSS. And its completely open-source.
+              The Marketing Masters is your go-to platform for expert strategies, insights, and tools designed to elevate your brand and maximize growth. Join us and become a marketing pro.
             </div>
 
             <div className="mt-5">

@@ -7,7 +7,7 @@ const Faq = () => {
   return (
     <Container className="!p-0">
       <div className="w-full max-w-2xl p-2 mx-auto rounded-2xl">
-        {faqdata.map((item, index) => (
+        {faqdata.map((item) => (
           <div key={item.question} className="mb-5">
             <Disclosure>
               {({ open }) => (
@@ -31,26 +31,28 @@ const Faq = () => {
       </div>
     </Container>
   );
-}
+};
 
 const faqdata = [
   {
-    question: "Is this template completely free to use?",
-    answer: "Yes, this template is completely free to use.",
-  },
-  {
-    question: "Can I use it in a commercial project?",
-    answer: "Yes, this you can.",
-  },
-  {
-    question: "What is your refund policy? ",
+    question: "Is The Marketing Masters platform free to try?",
     answer:
-      "If you're unhappy with your purchase for any reason, email us within 90 days and we'll refund you in full, no questions asked.",
+      "Yes! We offer a free trial so you can explore all the key features before committing.",
   },
   {
-    question: "Do you offer technical support? ",
+    question: "Can I use this tool for my commercial marketing projects?",
     answer:
-      "No, we don't offer technical support for free downloads. Please purchase a support plan to get 6 months of support.",
+      "Absolutely! The Marketing Masters is designed to support both personal and commercial marketing campaigns.",
+  },
+  {
+    question: "What kind of customer support do you offer?",
+    answer:
+      "We provide email and chat support during business hours, plus a rich knowledge base for self-service.",
+  },
+  {
+    question: "Is there a cancellation or refund policy?",
+    answer:
+      "Yes, you can cancel anytime. For subscription plans, refunds are handled on a case-by-case basis within the first 30 days.",
   },
 ];
 

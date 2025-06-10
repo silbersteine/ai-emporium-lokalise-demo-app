@@ -6,52 +6,52 @@ import userOneImg from "../public/img/user1.jpg";
 import userTwoImg from "../public/img/user2.jpg";
 import userThreeImg from "../public/img/user3.jpg";
 
-const Testimonials  = () => {
+const Testimonials = () => {
   return (
     <Container>
       <div className="grid gap-10 lg:grid-cols-2 xl:grid-cols-3">
         <div className="lg:col-span-2 xl:col-auto">
           <div className="flex flex-col justify-between w-full h-full bg-gray-100 px-14 rounded-2xl py-14 dark:bg-trueGray-800">
             <p className="text-2xl leading-normal ">
-              Share a real testimonial that hits some of your benefits from one of your popular customer.
+              “The Marketing Masters transformed our lead generation process, driving measurable growth and increasing conversion rates significantly.”
             </p>
 
             <Avatar
               image={userOneImg}
               name="Sarah Steiner"
-              title="VP Sales at Google"
+              title="VP of Sales at Google"
             />
           </div>
         </div>
         <div className="">
           <div className="flex flex-col justify-between w-full h-full bg-gray-100 px-14 rounded-2xl py-14 dark:bg-trueGray-800">
             <p className="text-2xl leading-normal ">
-              Make sure you only pick the right sentence to keep it short and simple.
+              “This platform simplified our marketing workflows and helped our team collaborate more effectively — a true game changer.”
             </p>
             <Avatar
               image={userTwoImg}
               name="Dylan Ambrose"
-              title="Lead marketer at Netflix"
+              title="Lead Marketing Strategist at Netflix"
             />
           </div>
         </div>
         <div className="">
           <div className="flex flex-col justify-between w-full h-full bg-gray-100 px-14 rounded-2xl py-14 dark:bg-trueGray-800">
             <p className="text-2xl leading-normal ">
-              This is an awesome landing page template I've seen. I would use this for anything.
+              “An exceptional marketing solution that boosted our brand presence and engagement across all channels.”
             </p>
 
             <Avatar
               image={userThreeImg}
               name="Gabrielle Winn"
-              title="Co-founder of Acme Inc"
+              title="Co-founder of Acme Inc."
             />
           </div>
         </div>
       </div>
     </Container>
   );
-}
+};
 
 function Avatar(props) {
   return (
@@ -59,9 +59,9 @@ function Avatar(props) {
       <div className="flex-shrink-0 overflow-hidden rounded-full w-14 h-14">
         <Image
           src={props.image}
-          width="40"
-          height="40"
-          alt="Avatar"
+          width={40}
+          height={40}
+          alt={`Avatar of ${props.name}`}
           placeholder="blur"
         />
       </div>
@@ -70,17 +70,6 @@ function Avatar(props) {
         <div className="text-gray-600 dark:text-gray-400">{props.title}</div>
       </div>
     </div>
-  );
-}
-
-function Mark(props) {
-  return (
-    <>
-      {" "}
-      <mark className="text-indigo-800 bg-indigo-100 rounded-md ring-indigo-100 ring-4 dark:ring-indigo-900 dark:bg-indigo-900 dark:text-indigo-200">
-        {props.children}
-      </mark>{" "}
-    </>
   );
 }
 

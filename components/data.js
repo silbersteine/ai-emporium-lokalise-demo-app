@@ -11,50 +11,49 @@ import benefitOneImg from "../public/img/benefit-one.png";
 import benefitTwoImg from "../public/img/benefit-two.png";
 
 const benefitOne = {
-  title: "Highlight your benefits",
-  desc: "You can use this space to highlight your first benefit or a feature of your product. It can also contain an image or Illustration like in the example along with some bullet points.",
+  title: "Showcase Your Marketing Strengths",
+  desc: "Use this section to highlight your core marketing benefits or features that set your brand apart. You can also add an engaging image or illustration alongside key bullet points.",
   image: benefitOneImg,
   bullets: [
     {
-      title: "Understand your customers",
-      desc: "Then explain the first point breifly in one or two lines.",
+      title: "Deep Customer Insights",
+      desc: "Understand your audience’s needs and preferences to tailor your marketing strategies effectively.",
       icon: <FaceSmileIcon />,
     },
     {
-      title: "Improve acquisition",
-      desc: "Here you can add the next benefit point.",
+      title: "Boost Lead Acquisition",
+      desc: "Implement targeted campaigns that attract and convert new customers.",
       icon: <ChartBarSquareIcon />,
     },
     {
-      title: "Drive customer retention",
-      desc: "This will be your last bullet point in this section.",
+      title: "Enhance Customer Loyalty",
+      desc: "Use proven techniques to retain clients and increase lifetime value.",
       icon: <CursorArrowRaysIcon />,
     },
   ],
 };
 
 const benefitTwo = {
-  title: "Offer more benefits here",
-  desc: "You can use this same layout with a flip image to highlight your rest of the benefits of your product. It can also contain an image or Illustration as above section along with some bullet points.",
+  title: "Unlock Additional Marketing Advantages",
+  desc: "Highlight more benefits of your marketing solutions with a dynamic layout and complementary imagery, helping prospects understand your full value.",
   image: benefitTwoImg,
   bullets: [
     {
-      title: "Mobile Responsive Template",
-      desc: "Nextly is designed as a mobile first responsive template.",
+      title: "Optimized for All Devices",
+      desc: "Our strategies and tools ensure seamless experiences on mobile, desktop, and beyond.",
       icon: <DevicePhoneMobileIcon />,
     },
     {
-      title: "Powered by Next.js & TailwindCSS",
-      desc: "This template is powered by latest technologies and tools.",
+      title: "Powered by Cutting-Edge Tech",
+      desc: "Leverage the latest marketing technologies and data-driven insights for superior results.",
       icon: <AdjustmentsHorizontalIcon />,
     },
     {
-      title: "Dark & Light Mode",
-      desc: "Nextly comes with a zero-config light & dark mode. ",
+      title: "Flexible Branding Modes",
+      desc: "Adapt your campaigns with light and dark themes to match your brand identity perfectly.",
       icon: <SunIcon />,
     },
   ],
 };
 
-
-export {benefitOne, benefitTwo};
+export { benefitOne, benefitTwo };
