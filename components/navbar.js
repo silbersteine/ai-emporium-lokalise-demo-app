@@ -3,8 +3,10 @@ import ThemeChanger from "./DarkSwitch";
 import Image from "next/image"
 import { Disclosure } from "@headlessui/react";
 import LocaleSwitcher from "./localeSwitcher";
+import { useTranslation } from "react-i18next";
 
 const Navbar = () => {
+  const {t} = useTranslation();
   const navigation = [
     "Services",
     "Campaigns",

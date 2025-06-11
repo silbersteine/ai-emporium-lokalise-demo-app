@@ -9,6 +9,7 @@ import {
 
 import benefitOneImg from "../public/img/benefit-one.png";
 import benefitTwoImg from "../public/img/benefit-two.png";
+import { Trans } from "react-i18next";
 
 const benefitOne = {
   title: "Showcase Your Marketing Strengths",

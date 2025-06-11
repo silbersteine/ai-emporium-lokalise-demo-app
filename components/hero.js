@@ -1,8 +1,10 @@
 import Image from "next/image";
 import Container from "./container";
 import heroImg from "../public/img/hero.png";
+import { useTranslation, Trans } from 'next-i18next';
 
 const Hero = () => {
+  const { t } = useTranslation()
   return (
     <>
       <Container className="flex flex-wrap ">
