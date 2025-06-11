@@ -1,0 +1,18 @@
+{
+    "navbar.logo": "The Marketing Masters",
+    "navbar.logoAlt": "Logo The Marketing Masters",
+    "navbar.toggleMenu": "Basculer le menu",
+    "navbar.menu.services": "Services",
+    "navbar.menu.campaigns": "Campagnes",
+    "navbar.menu.pricing": "Tarification",
+    "navbar.menu.about": "À propos de nous",
+    "navbar.menu.insights": "Perspectives",
+    "navbar.cta": "Commençons",
+    "hero.header": "Libérez votre potentiel marketing avec The Marketing Masters",
+    "hero.subHeader": "The Marketing Masters est votre plateforme de référence pour des stratégies d'experts, des analyses et des outils conçus pour élever votre marque et maximiser votre croissance. Rejoignez-nous et devenez un pro du marketing.",
+    "hero.ctaPrimary": "Commencer maintenant",
+    "hero.ctaSecondary": "Voir sur Github",
+    "hero.githubIconTitle": "GitHub",
+    "hero.imageAlt": "Illustration héroïque",
+    "hero.footerText": "Approuvé par <span class=\"text-indigo-600\">2000+<\/span> leaders marketing dans le monde entier"
+}
