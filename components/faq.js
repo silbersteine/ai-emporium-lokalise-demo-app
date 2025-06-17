@@ -2,12 +2,33 @@ import React from "react";
 import Container from "./container";
 import { Disclosure } from "@headlessui/react";
 import { ChevronUpIcon } from "@heroicons/react/24/solid";
+import { useTranslation } from "react-i18next";
 
 const Faq = () => {
+  const { t } = useTranslation();
+  const faqdata = [
+    {
+      question: t('faq_q1'),
+      answer: t('faq_a1'),
+    },
+    {
+      question: t('faq_q2'),
+      answer: t('faq_a2'),
+    },
+    {
+      question: t('faq_q3'),
+      answer: t('faq_a3'),
+    },
+    {
+      question: t('faq_q4'),
+      answer: t('faq_a4'),
+    },
+  ];
+
   return (
     <Container className="!p-0">
       <div className="w-full max-w-2xl p-2 mx-auto rounded-2xl">
-        {faqdata.map((item) => (
+        {faqdata.map((item, idx) => (
           <div key={item.question} className="mb-5">
             <Disclosure>
               {({ open }) => (
@@ -32,28 +53,5 @@ const Faq = () => {
     </Container>
   );
 };
-
-const faqdata = [
-  {
-    question: "Is The Marketing Masters platform free to try?",
-    answer:
-      "Yes! We offer a free trial so you can explore all the key features before committing.",
-  },
-  {
-    question: "Can I use this tool for my commercial marketing projects?",
-    answer:
-      "Absolutely! The Marketing Masters is designed to support both personal and commercial marketing campaigns.",
-  },
-  {
-    question: "What kind of customer support do you offer?",
-    answer:
-      "We provide email and chat support during business hours, plus a rich knowledge base for self-service.",
-  },
-  {
-    question: "Is there a cancellation or refund policy?",
-    answer:
-      "Yes, you can cancel anytime. For subscription plans, refunds are handled on a case-by-case basis within the first 30 days.",
-  },
-];
 
 export default Faq;

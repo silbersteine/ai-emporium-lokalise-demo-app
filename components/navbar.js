@@ -8,11 +8,11 @@ import { useTranslation } from "react-i18next";
 const Navbar = () => {
   const {t} = useTranslation();
   const navigation = [
-    "Services",
-    "Campaigns",
-    "Pricing",
-    "About Us",
-    "Insights",
+    t('navbar_services'),
+    t('navbar_campaigns'),
+    t('navbar_pricing'),
+    t('navbar_about_us'),
+    t('navbar_insights'),
   ];
 
   return (
